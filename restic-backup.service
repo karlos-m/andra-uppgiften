@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Restic Backup
+After=netowrk.target
+
+[Service]
+User=karlos
+Type=oneshot
+ExecStart=/usr/local/sbin/restic-backup.sh
+
+[Install]
+WantedBy=multi-user.target
